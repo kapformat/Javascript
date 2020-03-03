@@ -1,0 +1,127 @@
+//une fonction qui est sur un objet est appelé methode
+//au lieu qu elle soit globale, elle se trouve apres un var.
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fonction JS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+    <h1>Fonction.js</h1>
+
+<script type="text/javascript">
+
+function nomDeLaFonction(param1, param2, param3)
+{
+    alert('coucou');
+}
+nomDeLaFonction(); // pour executer une fonction
+
+
+    var classA = [{
+        nom:'Marc',
+        moy:15
+    }, {
+        nom:'Marion',
+        moy:8
+    }, {
+        nom:'Antoine',
+        moy:4
+    }, {
+        nom:'Jean',
+        moy:14
+    }
+]
+// //je veux creer un tableau contenant les eleves qui ont la moyenne
+// //je creer ma fonction aLaMoyenne
+//     var aLaMoyenne
+// //je vais lui mettre en paramettre la liste des éleves
+//     var aLaMoyenne = function(eleves)
+// //et je vais demander à ma fonction de me renvoyer un tableau contenant la liste des eleves qui ont la moyenne
+// //il me faut donc creer une nouvelle variable dans cette fonction que j appelle moyenne
+//     var aLaMoyenne = function(eleves){
+//         var moyennes = []// je cree donc un tableau [vide]
+        
+//     }
+// //je parcours maintenant les éleves en faisant une boucle for
+// var aLaMoyenne = function(eleves){
+//         var moyennes = []
+//             for(var i=0;i<eleves.length;i++)
+//     }
+// // ensuite je creer une nouvelle variable, qui va contenir les eleves individuellement
+// //et je vérifie "SI" quel eleve à la moyenne
+// var aLaMoyenne = function(eleves){
+//         var moyennes = []
+//             for(var i=0;i<eleves.length;i++){
+//             var eleve=eleves[i]
+//             if(eleve.moy>=10){
+
+//             }
+//         }
+                
+//     }
+//ALORS dans ce cas là eleve.moy>=10, je le rajoute avec la methode push dans le tableau en question (moyenneS)
+var aLaMoyenne = function(eleves){
+        var moyennes = []
+            for(var i=0;i<eleves.length;i++){
+            var eleve=eleves[i]
+            if(eleve.moy>=10){
+                moyennes.push(eleve)
+
+            }
+        }
+        return moyennes// je renvois les eleves qui ont la moyenne    
+    }
+    console.log(aLaMoyenne(classA))
+
+///////////////////////////////////////////////////////////////////////////:
+
+var phrase = 'Dans cette longue phrase dans laquelle je ne mets pas de point juste des espaces Je change juste en majuscule un peu et je reviens à la Ligne dans cette phrase mais je ne peux pas Je ..'
+//on compter le nombre de mots qui réitèrent et connaitre leur nombre pour chaque
+// il faut separer notre phrase grace aux espaces methode split str.split([separator[, limit]])
+// je vais commencer par creer une variable mot  
+var mots = phrase.split(" ")//La méthode split() permet de diviser une chaîne de caractères à partir d'un séparateur pour fournir un tableau de sous-chaînes.
+    console.log(mots)
+//on nous donne une liste, comptons les avec for
+ 
+
+/////////////////////////////////////////////////
+
+function nomDeLaFonction(param1, param2, param3)
+{
+    alert('coucou');
+}
+nomDeLaFonction(); // pour executer une fonction
+
+/////////////////////////////////////////////////
+
+function addition(nbr1, nbr2)
+{
+    alert(Number(nbr1)+Number(nbr2));
+}
+var prompt1 = prompt('Votre 1er nombre');
+var prompt2 = prompt('Votre 2ème nombre');
+
+addition(prompt1, prompt2);
+
+/////////////////////////////////////////////////
+
+function addition(nbr1, nbr2)
+{
+    var resultat = Number(nbr1)+Number(nbr2);
+    resultat += 30;
+    return resultat;
+}
+var prompt1 = prompt('Votre 1er nombre');
+var prompt2 = prompt('Votre 2ème nombre');
+
+var add = addition(prompt1, prompt2);
+alert(add);
+
+
+</script>
+</body>
+</html>
+

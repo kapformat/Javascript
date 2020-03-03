@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>boucle JS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+    <h1>Boucle.js</h1>
+
+<script type="text/javascript">
+
+    var i=0
+    ///////////////////////// Tant que While et For ///////////////////////
+    var i=0 // obligé de creer uen variable par default et specifier l'inscrémentation
+    while(i<11){        //  while(i<11){
+        console.log(i)  //  console.log(i)            // il faut pouvoir sortir de la boucle
+        if (i==3){      //  }                 --> sans l'incrementation, la condition while devient une boucle infinie
+            break       
+        }
+        i=i+1           // ou i+=1  ou encore i++ 
+    }      
+
+    for (var j=0; j<5; j++){ // boucle equivault boucle while
+        console.log(j);
+    }          
+    console.log(i+' salut')     // rajoute un espace à salut.
+    console.log(i+' '+'salut')  //bof
+    //Tant que Condition est Vrai Alors
+    // et l' instruction s'execute 'à nouveau'
+
+ ///////////////////////// Tant que While et For /////////////////////////////
+    var eleves=['Jean','Marc','Marion','Kevin']
+        console.log('3 console.log '+eleves[0])
+        console.log('3 console.log '+eleves[1])
+        console.log('3 console.log '+eleves[2])
+
+    var i=0
+    while(i<3){ // ne marche pas avec for ()
+    console.log('Coucou While '+eleves[i++])
+    }
+
+    for (var i=0; i<3; i++ ){    // en mettant i<=2 marche aussi , vu que l'on demarre de 0     
+        console.log('Coucou For '+eleves[i])
+        }
+            for (var i=0; i<eleves.length; i++ ){             // en mettant .length, si je rajoute une colonne,    
+            console.log('coucou For .length '+eleves[i])    //ca m'evite de changer i<4 par ex
+            }
+                for (var i=0; i<eleves.length; i++ ){           
+                var eleve=eleves[i]   // ajouter une variable, permet de pouvoir charger la variable en cours
+                console.log('coucou For var eleve '+eleve)
+                }
+                    for (var i=eleve.length-1; i>=0; i--){      //decremente 
+                        console.log('Hello decrementation '+eleve) 
+                    }
+ ///////////////////////// Do While et While /////////////////////////////
+ do 
+{
+    userNombre1 = parseInt(prompt('entrez votre 1er nombre et valider'));
+}
+while (isNaN(userNombre1));
+
+var userNombre2 = parseInt(prompt('entrez votre 2eme nombre et valider'));
+while(isNaN(userNombre2))
+{
+    userNombre2 = parseInt(prompt("je n'ai pas compris votre réponse"));
+}
+
+var resultat = userNombre1 + userNombre2;
+alert('la somme des nombres ' +userNombre1+ ' et ' +userNombre2+ ' est égal à : ' +resultat);
+
+ ///////////////////////// Tant que While et For /////////////////////////////
+
+var nombre = 91         //creer boucle qui verifi si 91 est premier
+console.log(91 % 2)    //non divisible
+console.log(80 % 2)  
+
+                            // for (var i=91; i>=0; i--){
+                            //     if(91%i >=1){
+    //test                    //     console.log()   
+                            // }
+                            // }
+
+/*un nombre est premier SI il n'est divisible Que par un ou lui meme
+un nombre n'est pas premier si il est divisible par un nombre compris entre 2 et lui meme ( -1)
+*/
+var nombre=31
+for ( var i=2; i < nombre; i++){
+    console.log(i);
+}//affiche tout les nombres
+for ( var i=2; i < nombre; i++){
+    console.log(91 % i===0);
+}// quelque part un nombre est divisible
+for ( var i=2; i < nombre; i++){
+    if(nombre % i===0){
+        console.log('ce nombre n est pas premier')
+        console.log(nombre+ ' est divisible par '+i)
+        break
+    }else{
+        console.log()
+    }
+}// 
+
+
+
+
+
+</script>
+</body>
+</html>

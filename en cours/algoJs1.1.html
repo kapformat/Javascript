@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>algoJs1</title>
+    <meta charset="utf-8">
+    <link href="algoJs1.css">
+    <script src="algoJs1.js"></script>
+</head>
+<body>
+    <h1> SIAGE.ALG</h1>
+    <h2>Fonctionnalités du programme :</h2>
+
+    <p>Saisir l'âge de l'utilisateur et afficher un message correspondant à son statut : </p>
+         <ul id="listAge">
+             <li id="">"Programme réservé aux personnes majeures" s'il a moins de 18 ans</li>
+             <li>"Statut jeune" entre 18 et 26 ans,</li>
+             <li>"Statut adulte" entre 27 et 65 ans</li>
+             <li>"Programme réservé aux personnes non-retraitées"</li>
+         </ul>
+        
+    <h2>Formulaire :</h2>
+
+         <input type="number" id="textSaisi"/>                  <!-- id="textSaisi" user ecrit nombre -->
+
+         <input type="button" id="btnOk" value="ok"/>           <!-- id="btnOk" bouton ok -->
+         <input type="button" id="btnNok" value="annuler"/>     <!-- id="btnNok" bouton Nok -->
+
+         <div id="reponse"></div>                               <!-- id="reponse" Zone de reponse statut-->
+
+    <h2>Analyse PseudoCode :</h2>
+
+        <h3>Saisir l'âge de l'utilisateur et afficher un message correspondant à son statut :</h3>
+
+            <h4>User ecrit nombre entier compris entre 1 et 100</h4>
+
+            <h4>User appuis sur btnOk pour valider sa saisie</h4>
+
+                <p>conditions:</p>
+                <p>&lt 18 ans</p>
+                <p>&lt 26 ans</p>
+                <p>&lt 65 ans</p>
+                <p>&lt 100 ans</p>
+                <p>&lt 119 ans</p>
+                <p>&gt= 120 ans</p>
+            
+                <p>je lui renvois une reponse dans la div id reponse</p>
+
+</body>
+</html>

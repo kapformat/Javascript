@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabelau JS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<h1>Tabelau.js</h1>
+
+<script type="text/javascript">
+
+// un tableau permet de contenir plusieur items. ici 6.
+var prenom = 'kevin';
+var age = 35;
+var tableau = ['PHP', 'C++', prenom, 'Ruby', 'Js', age];
+    // index :   0      1     2       3      4      5
+console.log(tableau);
+tableau.pop(); //supprime la derniere ligne; ici age.
+tableau.shift();//supprime la 1ere ligne ; ici PHP
+
+var languageProg = tableau[3];
+console.log(tableau);
+console.log(tableau[1]);
+console.log(languageProg);
+// nous n' avons plus rien en tableau [4]
+console.log(tableau[4]);
+tableau[5] = 'python'; //modifi l item 5 du tableau
+console.log(tableau);
+tableau.push('HTML', 'CSS');// rajoute à la suite
+console.log(tableau);
+tableau.splice(1,2, 'ruby', 'kevin');// supprime les valeur dans a partir de index 1 jusqu a index 2 et les remplace par 'ruby' et 'kevin'
+console.log(prenom);
+console.log(tableau);
+tableau.splice(2, 0, 'PHP', 'JS');// commence a partir de l index 2 et inser un nouveau parametre sans supprimer
+console.log(tableau);
+console.log(tableau.length);
+    for( var i = 0; i<tableau.length; i++)
+    {
+        console.log('Index => '+i+' | Valeur => ' +tableau[i]);// montre index pour chaques arguments du tableau[]
+    }
+/////////////////////////////programme afficher plusieurs resultat oar des virgules//////////////////////////////////////////////::
+var nombreSaisi = [];
+while(true) 
+{
+    var promptText = prompt('Entrez des nombres: ');
+    if(promptText != 0)
+    {
+        nombreSaisi.push(promptText);
+    }
+    else
+    {
+        break;
+    }
+}
+console.log(nombreSaisi);
+var nombreSaisiText = nombreSaisi.join(', ');
+alert('Vous avez saisi les nombres suivants: '+ nombreSaisiText);
+</script>
+</body>
+</html>

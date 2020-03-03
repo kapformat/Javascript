@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>condition JS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<h1>Condition.js</h1>
+
+<script type="text/javascript">
+
+// marc est un objet, 
+//qui contient plusieurs propriete
+//les proprietes prennent une valeur 
+	var marc = {
+		nom:'Marc',
+		age:18,
+		moyenne:15
+}
+///////////////////////// IF ESLE IF ELSE ///////////////////////
+	if(marc.age>=18){
+		console.log('tu peux passer ton permis')
+	}else if(marc.age>=16){
+		console.log('tu peux passer la conduite accompagnée')
+	}else{
+		console.log('tu ne peux pas conduire')
+	}
+	// Si age >= 18 Alors
+	// 	tu peux conduire
+	// Sinon SI age >=15 
+	// 	tu peux passer la conduite accompagnée
+	// Sinon
+	// 	tu ne peux pas conduire
+
+///////////////////////// ET : && et OU : || ///////////////////////
+	if(marc.age>=18 && marc.age<=25){
+		console.log('Bravo, tu as le droit au tarif jeune')
+	}else{
+		console.log("Tu n'as pas le droit au tarif jeune")// double guillemets pour que le ' soit pris en compte
+	}
+
+	if(marc.age<18 || marc.age>25){
+		console.log('Tu n\'as pas le droit au tarif jeune')// antislah pour que le ' soit pris en compte
+	}else{
+		console.log('Bravo, tu as le droit au tarif jeune')
+	}
+
+	if(marc.age>=70 || marc.age>=18 && marc.age<=25){		// le ET : && à la priorité
+		console.log('Bravo, tu as le droit au tarif jeune')	// il fait la comparaison de && en 1er
+	}else{													// apres que && soit comparé, le || compare à son tour,
+		console.log('Tu n\'as pas le droit au tarif jeune')	//le || compare à son tour
+	}
+	// ET : &&
+	// OU : ||
+	// SI age >=18 ET age <=25 Alors
+	// 	Bravo, tu as le droit au tarif jeune
+	// Sinon
+	// 	Tu n' as pas le droit au tarif jeune
+
+///////////////////////// Switch case default ///////////////////////
+	if(marc.age===18){
+		console.log('Bravo, tu es majeur')
+	}else if(marc.age===25){
+		console.log('Tu as un quart de siecle')
+	}else if(marc.age==50){
+		console.log("Fiouu t'es vieux")
+	}else{
+		console.log('Bon anniv')
+	}
+// donne le meme resultat
+	switch(marc.age){
+		case 18:
+			console.log('Bravo, tu as 18 ans')
+				break
+		case 25:
+			console.log('Tu as un quart de siecle')
+				break
+		case 50:
+			console.log("Fiouu t'es vieux")
+				break
+		default:						// default équivaut à else
+			console.log('Bon anniv')				
+	}
+// avec switch, je ne peux pas faire de comparaison (< > >= <= && || == ...), 
+//switch ne marche qu avec des égalités.
+
+/////////////////////////Raccourcis If else ///////////////////////
+
+console.log(marc.age>=18?'tu es majeur':'tu es mineur')
+//Affiche moi Si age >= 18 'majeur'  SINON  'mineur'
+// seulement valable pour un booleen?
+</script>
+</body>
+</html>
