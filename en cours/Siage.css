@@ -1,0 +1,19 @@
+fieldset {
+    width:25%;
+	text-align:center;
+	border-radius:10px 10px 10px 10px;
+ }
+ 
+ #choix {
+	 visibility:hidden;
+	 
+ }
+ 
+#on {
+	visibility:hidden;
+}
+
+#reset {
+	visibility:hidden;
+	
+}
